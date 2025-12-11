@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedStyles = [];
 
     const styleImages = [
-        { id: 'vintage', name: 'Vintage', displayName: '빈티지', url: '../../static/images/vintage_interior/vintage_interior_0_1.jpg' },
-        { id: 'luxury', name: 'Luxury', displayName: '럭셔리', url: '../../static/images/luxury_interior/luxury_interior_0_1.jpg' },
-        { id: 'natural', name: 'Natural', displayName: '내추럴', url: '../../static/images/natural_interior/natural_interior_0_1.jpg' },
-        { id: 'scandinavian', name: 'Scandinavian', displayName: '스칸디나비안', url: '../../static/images/scandinavian_interior/scandinavian_interior_0_1.jpg' },
-        { id: 'french', name: 'French', displayName: '프렌치', url: '../../static/images/prench_interior/prench_interior_0_1.jpg' },
-        { id: 'lovely', name: 'Lovely', displayName: '러블리', url: '../../static/images/lovely_interior/lovely_interior_0_1.jpg' },
-        { id: 'pastel', name: 'Pastel', displayName: '파스텔', url: '../../static/images/pastel_interior/pastel_interior_0_1.jpg' },
-        { id: 'modern', name: 'Modern', displayName: '모던', url: '../../static/images/modern_interior/modern_interior_0_1.jpg' },
-        { id: 'bohemian', name: 'Bohemian', displayName: '보헤미안', url: '../../static/images/bohemian_interior/bohemian_interior_0_1.jpg' },
-        { id: 'classic', name: 'Classic', displayName: '클래식', url: '../../static/images/calssic_interior/calssic_interior_0_1.jpg' },
-        { id: 'industrial', name: 'Industrial', displayName: '인더스트리얼', url: '../../static/images/industrial_interior/industrial_interior_0_1.jpg' },
-        { id: 'minimal', name: 'Minimal', displayName: '미니멀', url: '../../static/images/minimal_interior/minimal_interior_0_1.jpg' }
+        { id: 'vintage', name: 'Vintage', displayName: '빈티지', url: 'https://images.unsplash.com/photo-1577176434922-803273eba97a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwZnVybml0dXJlfGVufDF8fHx8MTc2NDI4OTIwOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'luxury', name: 'Luxury', displayName: '럭셔리', url: 'https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiZWRyb29tfGVufDF8fHx8MTc2NDI2ODY5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'natural', name: 'Natural', displayName: '내추럴', url: 'https://images.unsplash.com/photo-1485819196298-11222a657b31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwaG9tZSUyMGRlY29yfGVufDF8fHx8MTc2NDMwNzczNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'scandinavian', name: 'Scandinavian', displayName: '스칸디나비안', url: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2FuZGluYXZpYW4lMjBsaXZpbmclMjByb29tfGVufDF8fHx8MTc2NDIxMzE5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'french', name: 'French', displayName: '프렌치', url: 'https://images.unsplash.com/photo-1679586493118-dd400758aeab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVuY2glMjBhcGFydG1lbnR8ZW58MXx8fHwxNzY0MzA3NzM2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'lovely', name: 'Lovely', displayName: '러블리', url: 'https://images.unsplash.com/photo-1697162103256-dad37889d979?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXRlJTIwcGluayUyMGJlZHJvb218ZW58MXx8fHwxNzY0MzA3NzM2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'pastel', name: 'Pastel', displayName: '파스텔', url: 'https://images.unsplash.com/photo-1592782423007-db7afd35017f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBiZWRyb29tfGVufDF8fHx8MTc2NDMwNzczNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'modern', name: 'Modern', displayName: '모던', url: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsaXZpbmclMjByb29tfGVufDF8fHx8MTc2NDI5NzIzMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'bohemian', name: 'Bohemian', displayName: '보헤미안', url: 'https://images.unsplash.com/photo-1628304457639-3dd4ded74a8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib2hlbWlhbiUyMGJlZHJvb218ZW58MXx8fHwxNzY0MzA3NzM3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'classic', name: 'Classic', displayName: '클래식', url: 'https://images.unsplash.com/photo-1705299493246-9312166c7d18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc2ljJTIwZnVybml0dXJlJTIwcm9vbXxlbnwxfHx8fDE3NjQzMDc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'industrial', name: 'Industrial', displayName: '인더스트리얼', url: 'https://images.unsplash.com/photo-1758887250669-9ce43c44611d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbG9mdCUyMGFwYXJ0bWVudHxlbnwxfHx8fDE3NjQyNDM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' },
+        { id: 'minimal', name: 'Minimal', displayName: '미니멀', url: 'https://images.unsplash.com/photo-1610123172705-a57f116cd4d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYXBhcnRtZW50fGVufDF8fHx8MTc2NDI0NjI3MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral' }
     ];
 
     // Elements
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderHeaderNav() {
         headerNav.innerHTML = `
             <button onclick="window.location.href='mypage.html'" class="px-4 py-2 text-[15px] font-normal text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all leading-none">마이페이지</button>
-            <button onclick="window.location.href='../user/reference_board.html'" class="px-4 py-2 text-[15px] font-normal text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all leading-none">레퍼런스 보드</button>
+            <button onclick="window.location.href='reference_board.html'" class="px-4 py-2 text-[15px] font-normal text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all leading-none">레퍼런스 보드</button>
             <button onclick="window.location.href='preference.html'" class="px-4 py-2 text-[15px] font-normal text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all leading-none">취향분석</button>
             <button onclick="Auth.logout()" class="px-4 py-2 text-[15px] font-normal text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all leading-none">로그아웃</button>
         `;
@@ -176,43 +176,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Step 4 Logic
     function renderStyleGrid() {
-        styleGrid.innerHTML = styleImages.map(style => {
-            // Get random image from IMAGE_DATA if available
-            let imageUrl = style.url;
-
-            // Debug check
-            if (!window.IMAGE_DATA) {
-                console.error("IMAGE_DATA not found!");
-                // alert("Error: Image data not loaded. Please refresh.");
-            }
-
-            if (window.IMAGE_DATA && window.IMAGE_DATA[style.id] && Array.isArray(window.IMAGE_DATA[style.id])) {
-                const images = window.IMAGE_DATA[style.id];
-                if (images.length > 0) {
-                    const randomIndex = Math.floor(Math.random() * images.length);
-                    imageUrl = images[randomIndex];
-                }
-            }
-
-            // Force hardcoded paths for verification - REMOVED
-            // if (style.id === 'vintage') imageUrl = 'images/vintage_interior/vintage_interior_0_1.jpg';
-            // if (style.id === 'modern') imageUrl = 'images/modern_interior/modern_interior_0_1.jpg';
-
-            return `
+        styleGrid.innerHTML = styleImages.map(style => `
             <button onclick="toggleStyle('${style.id}')" class="relative aspect-square rounded-xl overflow-hidden group">
-                <img src="${imageUrl}" alt="${style.name}" class="w-full h-full object-cover">
-                <!-- Overlay: Solid Gray Background with Text -->
-                <div class="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center" style="background-color: #6b7280;">
-                    <p class="text-white text-xl font-bold tracking-wide drop-shadow-lg">${style.displayName}</p>
+                <img src="${style.url}" alt="${style.name}" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                    <p class="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">${style.displayName}</p>
                 </div>
-                <!-- Selection Checkmark Overlay -->
-                <div id="style-overlay-${style.id}" class="hidden absolute inset-0 z-20 bg-black/50 flex items-center justify-center">
+                <div id="style-overlay-${style.id}" class="hidden absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                         <i data-lucide="check" class="w-5 h-5" stroke-width="3"></i>
                     </div>
                 </div>
             </button>
-        `}).join('');
+        `).join('');
         lucide.createIcons();
     }
 
@@ -248,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 styles: selectedStyles
             };
             State.set('userPreferences', preferences);
-            window.location.href = '../user/reference_board.html';
+            window.location.href = 'reference_board.html';
         }
     });
 });
